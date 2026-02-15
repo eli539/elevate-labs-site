@@ -116,59 +116,55 @@
         </div>
     </div>
 
-    <!-- Navbar -->
-   <nav class="fixed w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-white/10" id="navbar">
+    <!-- תפריט ניווט משופר -->
+<nav class="fixed w-full z-[100] bg-slate-900/95 backdrop-blur-md border-b border-white/10" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
             
-            <!-- לוגו (השארתי את העיצוב הנקי) -->
-            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <!-- כאן ניתן להחזיר את התמונה המקורית שלך אם הייתה, או להשאיר את הטקסט -->
+            <!-- לוגו -->
+            <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
                 <span class="font-bold text-xl tracking-tight text-white">Elevate<span class="text-sky-500">Labs</span></span>
             </div>
 
-            <!-- תפריט למחשב (Desktop) - מוסתר בנייד -->
+            <!-- תפריט למחשב (מוסתר בנייד וטאבלט) -->
             <div class="hidden md:flex items-center space-x-8 rtl:space-x-reverse">
                 <a href="#about" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">About</a>
                 <a href="#incubator" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Incubator</a>
                 <a href="#contact" class="text-slate-300 hover:text-white transition-colors text-sm font-medium uppercase tracking-wider">Contact</a>
                 
-                <!-- כפתור לינקדאין -->
-                <a href="https://www.linkedin.com/in/eliam" target="_blank" class="text-sky-400 hover:text-sky-300 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                <a href="https://www.linkedin.com/in/eliam" target="_blank" class="text-sky-400 hover:text-sky-300 transition-all hover:scale-110">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
                 </a>
 
-                <!-- כפתור שפה -->
-                <button onclick="toggleLanguage()" class="text-slate-400 hover:text-white text-xs font-bold border border-slate-600 px-2 py-1 rounded">
+                <button onclick="toggleLanguage()" class="text-slate-400 hover:text-white text-xs font-bold border border-slate-700 px-3 py-1 rounded-full transition-all">
                     HE/EN
                 </button>
             </div>
 
-            <!-- כפתור המבורגר (Mobile Hamburger) - מופיע רק בנייד -->
-            <div class="md:hidden flex items-center gap-4">
-                <button onclick="toggleMenu()" class="text-white hover:text-sky-500 focus:outline-none p-2">
-                    <!-- אייקון 3 קווים -->
-                    <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-                    <!-- אייקון X (מוסתר בהתחלה) -->
-                    <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <!-- כפתור המבורגר לנייד -->
+            <div class="md:hidden flex items-center">
+                <button type="button" onclick="toggleMenu()" class="text-white hover:text-sky-500 transition-colors p-2 outline-none" aria-label="Toggle Menu">
+                    <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                    <svg id="menu-icon-close" class="hidden" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
                 </button>
             </div>
         </div>
     </div>
 
-    <!-- התפריט הנפתח לנייד (Mobile Drawer) -->
-    <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 absolute w-full left-0 top-20 shadow-2xl">
-        <div class="px-4 py-6 space-y-4 flex flex-col items-center text-center">
-            <a href="#about" onclick="toggleMenu()" class="block w-full text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-800">About</a>
-            <a href="#incubator" onclick="toggleMenu()" class="block w-full text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-800">Incubator</a>
-            <a href="#contact" onclick="toggleMenu()" class="block w-full text-slate-300 hover:text-white text-lg font-medium py-3 border-b border-slate-800">Contact</a>
+    <!-- תפריט נפתח לנייד -->
+    <div id="mobile-menu" class="hidden md:hidden bg-slate-900/fe border-b border-slate-800 shadow-2xl animate-in slide-in-from-top duration-300">
+        <div class="px-6 py-8 space-y-6 flex flex-col items-center text-center">
+            <a href="#about" onclick="toggleMenu()" class="block w-full text-slate-200 hover:text-sky-400 text-xl font-semibold py-2">About</a>
+            <a href="#incubator" onclick="toggleMenu()" class="block w-full text-slate-200 hover:text-sky-400 text-xl font-semibold py-2">Incubator</a>
+            <a href="#contact" onclick="toggleMenu()" class="block w-full text-slate-200 hover:text-sky-400 text-xl font-semibold py-2">Contact</a>
             
-            <div class="flex gap-6 mt-4 justify-center w-full">
-                <a href="https://www.linkedin.com/in/eliam" target="_blank" class="flex items-center gap-2 text-sky-400 font-bold">
-                    LinkedIn
+            <div class="flex flex-col gap-6 mt-6 w-full items-center pt-6 border-t border-slate-800">
+                <a href="https://www.linkedin.com/in/eliam" target="_blank" class="flex items-center gap-3 text-sky-400 text-lg font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                    LinkedIn Profile
                 </a>
-                <button onclick="toggleLanguage()" class="text-slate-400 font-bold">
-                    HE/EN
+                <button onclick="toggleLanguage()" class="bg-slate-800 text-white px-8 py-3 rounded-full font-bold text-sm">
+                    Switch Language (HE/EN)
                 </button>
             </div>
         </div>
@@ -502,34 +498,32 @@
             utter.lang = currentLang === 'he' ? 'he-IL' : 'en-US';
             window.speechSynthesis.speak(utter);
         }
-    </script>
- function toggleMenu() {
+   <script>
+    function toggleMenu() {
         const menu = document.getElementById('mobile-menu');
         const iconOpen = document.getElementById('menu-icon-open');
         const iconClose = document.getElementById('menu-icon-close');
         
-        // החלפת מצב התפריט (פתוח/סגור)
         if (menu.classList.contains('hidden')) {
             menu.classList.remove('hidden');
             iconOpen.classList.add('hidden');
             iconClose.classList.remove('hidden');
+            document.body.style.overflow = 'hidden'; // מונע גלילה כשהתפריט פתוח
         } else {
             menu.classList.add('hidden');
             iconOpen.classList.remove('hidden');
             iconClose.classList.add('hidden');
+            document.body.style.overflow = 'auto'; // מחזיר גלילה
         }
     }
 
-    // פונקציית שפה (דוגמה בסיסית - התאם לקוד הקיים שלך אם צריך)
     function toggleLanguage() {
+        // אם כבר יש לך פונקציית שפה באתר, השתמש בה. 
+        // זו רק פונקציית מעטפת למקרה שאין:
         const html = document.documentElement;
-        if (html.getAttribute('dir') === 'rtl') {
-            html.setAttribute('dir', 'ltr');
-            alert("Switched to English");
-        } else {
-            html.setAttribute('dir', 'rtl');
-            alert("הוחלף לעברית");
-        }
+        const currentDir = html.getAttribute('dir');
+        html.setAttribute('dir', currentDir === 'rtl' ? 'ltr' : 'rtl');
+        // כאן ניתן להוסיף לוגיקה של החלפת טקסטים בפועל
     }
 </script>
 </body>
