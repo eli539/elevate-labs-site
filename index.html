@@ -387,7 +387,7 @@
     <section id="incubator" class="py-24 bg-slate-900 text-white">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-4" data-i18n="projects_title">Current Developments</h2>
-            <p class="text-slate-400 text-sm mb-16">Stealth projects in R&D — and two live in the wild.</p>
+            <p class="text-slate-400 text-sm mb-16">Stealth projects in R&D — and one live in the wild.</p>
             <!-- MeetMemo Featured Card -->
             <div class="mb-12 p-8 rounded-2xl border border-cyan-500/40 bg-gradient-to-br from-slate-800/80 to-cyan-900/20 text-left rtl:text-right relative overflow-hidden">
 
@@ -452,13 +452,69 @@
                 </div>
             </div>
 
-            <!-- שבת שף Featured Card -->
-            <div class="mb-12 p-8 rounded-2xl border border-amber-500/40 bg-gradient-to-br from-slate-800/80 to-amber-900/20 text-left rtl:text-right relative overflow-hidden">
-
+            <!-- MindGlow Featured Card -->
+            <div class="relative p-8 rounded-2xl bg-gradient-to-br from-violet-950/60 to-purple-900/30 border border-violet-700/50 overflow-hidden mt-6">
                 <!-- Live badge -->
-                <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 flex items-center gap-2 bg-green-500/10 border border-green-500/30 rounded-full px-3 py-1">
+                <div class="absolute top-6 right-6 flex items-center gap-2 px-3 py-1 rounded-full bg-green-500/20 border border-green-500/40">
                     <div class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></div>
                     <span class="text-green-400 text-xs font-bold uppercase tracking-wider">Live</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row gap-8">
+                    <!-- Left: Logo + Info -->
+                    <div class="flex-1">
+                        <!-- Logo -->
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-violet-600 to-purple-800 flex items-center justify-center text-2xl shadow-lg shadow-violet-500/30">🦋</div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">MindGlow</h3>
+                                <p class="text-violet-400 text-sm font-medium">by ELEVATE</p>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-slate-300 leading-relaxed mb-6">AI reflection companion for private journaling, guided mood check-ins, and calm. Turns elephant-sized thoughts into one butterfly-sized step.</p>
+
+                        <!-- Feature pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full bg-violet-900/60 border border-violet-700/50 text-violet-300 text-xs font-semibold">🧠 AI Reflection</span>
+                            <span class="px-3 py-1 rounded-full bg-violet-900/60 border border-violet-700/50 text-violet-300 text-xs font-semibold">🔒 Private & Local</span>
+                            <span class="px-3 py-1 rounded-full bg-violet-900/60 border border-violet-700/50 text-violet-300 text-xs font-semibold">🌙 Calm Rooms</span>
+                            <span class="px-3 py-1 rounded-full bg-violet-900/60 border border-violet-700/50 text-violet-300 text-xs font-semibold">🇮🇱 EN / HE</span>
+                        </div>
+
+                        <!-- CTA buttons -->
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://mindglow.me" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-violet-600 hover:bg-violet-500 text-white rounded-full font-bold text-sm transition-all shadow-lg shadow-violet-500/20">Visit MindGlow →</a>
+                            <a href="https://mindglow.me/pricing" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-600 hover:border-slate-400 text-slate-300 rounded-full font-bold text-sm transition-all">💜 See Plans</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="flex flex-col gap-4 md:min-w-[200px]">
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-violet-400">$0</div>
+                            <div class="text-xs text-slate-400 mt-1">Free to start</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-green-400">AI</div>
+                            <div class="text-xs text-slate-400 mt-1">Claude + Gemini</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-purple-400">PWA</div>
+                            <div class="text-xs text-slate-400 mt-1">Any device</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- שבת שף Featured Card -->
+            <div class="mb-12 p-8 rounded-2xl border border-amber-500/20 bg-gradient-to-br from-slate-800/80 to-amber-900/20 text-left rtl:text-right relative overflow-hidden opacity-55 pointer-events-none select-none">
+
+                <!-- Soon badge -->
+                <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 flex items-center gap-2 bg-slate-700/50 border border-slate-600/40 rounded-full px-3 py-1">
+                    <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                    <span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Coming Soon</span>
                 </div>
 
                 <div class="flex flex-col md:flex-row md:items-center gap-8">
@@ -527,6 +583,235 @@
                     </div>
                 </div>
             </div>
+
+            <!-- שבת שף Featured Card -->
+            <div class="mb-12 p-8 rounded-2xl border border-amber-500/20 bg-gradient-to-br from-slate-800/80 to-amber-900/20 text-left rtl:text-right relative overflow-hidden opacity-55 pointer-events-none select-none">
+
+                <!-- Soon badge -->
+                <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 flex items-center gap-2 bg-slate-700/50 border border-slate-600/40 rounded-full px-3 py-1">
+                    <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                    <span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Coming Soon</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center gap-8">
+
+                    <!-- Left: Logo + Info -->
+                    <div class="flex-1">
+
+                        <!-- Logo -->
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#1A2744;border:1.5px solid rgba(197,160,89,0.5);">
+                                <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+                                    <circle cx="22" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <circle cx="42" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <rect x="18" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="13" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="20" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M22 21C20 17 19 13 22 9C25 13 24 17 22 21Z" fill="#E08A3C"/>
+                                    <path d="M22 20C21 17 20 14 22 11C24 14 23 17 22 20Z" fill="#FFD966"/>
+                                    <rect x="38" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="33" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="40" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M42 21C40 17 39 13 42 9C45 13 44 17 42 21Z" fill="#E08A3C"/>
+                                    <path d="M42 20C41 17 40 14 42 11C44 14 43 17 42 20Z" fill="#FFD966"/>
+                                    <rect x="11" y="54" width="42" height="3" rx="1.5" fill="#C5A059" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">שבת שף</h3>
+                                <p class="text-amber-400 text-xs font-mono font-bold uppercase tracking-wider">ELEVATE Labs · 2026</p>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-xl font-bold text-white mb-2 leading-tight">AI Chef for Shabbat & Jewish Holidays — Free Forever.</p>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Born from a family story. A Sephardic/Tunisian AI chef that plans your full Shabbat table — recipes, shopping list, prep timeline. Kosher, vegan-friendly, gluten-free options. Supports all Jewish holidays.</p>
+
+                        <!-- Feature pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/20 text-amber-300">✡️ Shabbat & Holidays</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 border border-purple-500/20 text-purple-300">🇮🇱 Hebrew Native</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-300">✡️ Strictly Kosher</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 border border-blue-500/20 text-blue-300">🆓 Free to Use</span>
+                        </div>
+
+                        <!-- CTA buttons -->
+                        <div class="flex gap-3 flex-wrap">
+                            <a href="https://schefai.com" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-900 rounded-full font-bold text-sm transition-all shadow-lg shadow-amber-500/20">Visit שבת שף →</a>
+                            <a href="https://schefai.com?ref=elevate" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-600 hover:border-slate-400 text-slate-300 rounded-full font-bold text-sm transition-all">🍽️ Try it now</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="flex flex-col gap-4 md:min-w-[200px]">
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Free forever</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-green-400">9</div>
+                            <div class="text-xs text-slate-400 mt-1">Jewish holidays</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-purple-400">&lt;60s</div>
+                            <div class="text-xs text-slate-400 mt-1">Full menu ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- שבת שף Featured Card -->
+            <div class="mb-12 p-8 rounded-2xl border border-amber-500/20 bg-gradient-to-br from-slate-800/80 to-amber-900/20 text-left rtl:text-right relative overflow-hidden opacity-55 pointer-events-none select-none">
+
+                <!-- Soon badge -->
+                <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 flex items-center gap-2 bg-slate-700/50 border border-slate-600/40 rounded-full px-3 py-1">
+                    <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                    <span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Coming Soon</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center gap-8">
+
+                    <!-- Left: Logo + Info -->
+                    <div class="flex-1">
+
+                        <!-- Logo -->
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#1A2744;border:1.5px solid rgba(197,160,89,0.5);">
+                                <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+                                    <circle cx="22" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <circle cx="42" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <rect x="18" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="13" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="20" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M22 21C20 17 19 13 22 9C25 13 24 17 22 21Z" fill="#E08A3C"/>
+                                    <path d="M22 20C21 17 20 14 22 11C24 14 23 17 22 20Z" fill="#FFD966"/>
+                                    <rect x="38" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="33" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="40" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M42 21C40 17 39 13 42 9C45 13 44 17 42 21Z" fill="#E08A3C"/>
+                                    <path d="M42 20C41 17 40 14 42 11C44 14 43 17 42 20Z" fill="#FFD966"/>
+                                    <rect x="11" y="54" width="42" height="3" rx="1.5" fill="#C5A059" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">שבת שף</h3>
+                                <p class="text-amber-400 text-xs font-mono font-bold uppercase tracking-wider">ELEVATE Labs · 2026</p>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-xl font-bold text-white mb-2 leading-tight">AI Chef for Shabbat & Jewish Holidays — Free Forever.</p>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Born from a family story. A Sephardic/Tunisian AI chef that plans your full Shabbat table — recipes, shopping list, prep timeline. Kosher, vegan-friendly, gluten-free options. Supports all Jewish holidays.</p>
+
+                        <!-- Feature pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/20 text-amber-300">✡️ Shabbat & Holidays</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 border border-purple-500/20 text-purple-300">🇮🇱 Hebrew Native</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-300">✡️ Strictly Kosher</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 border border-blue-500/20 text-blue-300">🆓 Free to Use</span>
+                        </div>
+
+                        <!-- CTA buttons -->
+                        <div class="flex gap-3 flex-wrap">
+                            <a href="https://schefai.com" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-900 rounded-full font-bold text-sm transition-all shadow-lg shadow-amber-500/20">Visit שבת שף →</a>
+                            <a href="https://schefai.com?ref=elevate" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-600 hover:border-slate-400 text-slate-300 rounded-full font-bold text-sm transition-all">🍽️ Try it now</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="flex flex-col gap-4 md:min-w-[200px]">
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Free forever</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-green-400">9</div>
+                            <div class="text-xs text-slate-400 mt-1">Jewish holidays</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-purple-400">&lt;60s</div>
+                            <div class="text-xs text-slate-400 mt-1">Full menu ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- שבת שף Featured Card -->
+            <div class="mb-12 p-8 rounded-2xl border border-amber-500/20 bg-gradient-to-br from-slate-800/80 to-amber-900/20 text-left rtl:text-right relative overflow-hidden opacity-55 pointer-events-none select-none">
+
+                <!-- Soon badge -->
+                <div class="absolute top-6 right-6 rtl:right-auto rtl:left-6 flex items-center gap-2 bg-slate-700/50 border border-slate-600/40 rounded-full px-3 py-1">
+                    <div class="w-2 h-2 rounded-full bg-slate-400"></div>
+                    <span class="text-slate-400 text-xs font-bold uppercase tracking-wider">Coming Soon</span>
+                </div>
+
+                <div class="flex flex-col md:flex-row md:items-center gap-8">
+
+                    <!-- Left: Logo + Info -->
+                    <div class="flex-1">
+
+                        <!-- Logo -->
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#1A2744;border:1.5px solid rgba(197,160,89,0.5);">
+                                <svg width="32" height="32" viewBox="0 0 64 64" fill="none">
+                                    <circle cx="22" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <circle cx="42" cy="18" r="8" fill="#E08A3C" opacity="0.18"/>
+                                    <rect x="18" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="13" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="20" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M22 21C20 17 19 13 22 9C25 13 24 17 22 21Z" fill="#E08A3C"/>
+                                    <path d="M22 20C21 17 20 14 22 11C24 14 23 17 22 20Z" fill="#FFD966"/>
+                                    <rect x="38" y="36" width="8" height="18" rx="2" fill="#B8882A"/>
+                                    <rect x="33" y="50" width="18" height="4" rx="2" fill="#B8882A"/>
+                                    <rect x="40" y="22" width="4" height="16" rx="1.5" fill="#FAF6EE"/>
+                                    <path d="M42 21C40 17 39 13 42 9C45 13 44 17 42 21Z" fill="#E08A3C"/>
+                                    <path d="M42 20C41 17 40 14 42 11C44 14 43 17 42 20Z" fill="#FFD966"/>
+                                    <rect x="11" y="54" width="42" height="3" rx="1.5" fill="#C5A059" opacity="0.5"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold text-white">שבת שף</h3>
+                                <p class="text-amber-400 text-xs font-mono font-bold uppercase tracking-wider">ELEVATE Labs · 2026</p>
+                            </div>
+                        </div>
+
+                        <!-- Tagline -->
+                        <p class="text-xl font-bold text-white mb-2 leading-tight">AI Chef for Shabbat & Jewish Holidays — Free Forever.</p>
+                        <p class="text-slate-400 text-sm mb-6 leading-relaxed">Born from a family story. A Sephardic/Tunisian AI chef that plans your full Shabbat table — recipes, shopping list, prep timeline. Kosher, vegan-friendly, gluten-free options. Supports all Jewish holidays.</p>
+
+                        <!-- Feature pills -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 border border-amber-500/20 text-amber-300">✡️ Shabbat & Holidays</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-purple-500/10 border border-purple-500/20 text-purple-300">🇮🇱 Hebrew Native</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-green-500/10 border border-green-500/20 text-green-300">✡️ Strictly Kosher</span>
+                            <span class="px-3 py-1 rounded-full text-xs font-bold bg-blue-500/10 border border-blue-500/20 text-blue-300">🆓 Free to Use</span>
+                        </div>
+
+                        <!-- CTA buttons -->
+                        <div class="flex gap-3 flex-wrap">
+                            <a href="https://schefai.com" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-amber-500 hover:bg-amber-400 text-slate-900 rounded-full font-bold text-sm transition-all shadow-lg shadow-amber-500/20">Visit שבת שף →</a>
+                            <a href="https://schefai.com?ref=elevate" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 border border-slate-600 hover:border-slate-400 text-slate-300 rounded-full font-bold text-sm transition-all">🍽️ Try it now</a>
+                        </div>
+                    </div>
+
+                    <!-- Right: Stats -->
+                    <div class="flex flex-col gap-4 md:min-w-[200px]">
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-amber-400">100%</div>
+                            <div class="text-xs text-slate-400 mt-1">Free forever</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-green-400">9</div>
+                            <div class="text-xs text-slate-400 mt-1">Jewish holidays</div>
+                        </div>
+                        <div class="p-4 rounded-xl bg-slate-800/60 border border-slate-700 text-center">
+                            <div class="text-2xl font-black text-purple-400">&lt;60s</div>
+                            <div class="text-xs text-slate-400 mt-1">Full menu ready</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
                 <div class="p-8 rounded-2xl bg-slate-800/50 border border-slate-700">
                     <h3 class="text-xl font-bold text-white mb-4">Project: Kinetic</h3>
                     <p class="text-slate-400 text-sm leading-relaxed" data-i18n="project_1_desc">Redefining personal energy efficiency through AI-optimized resource consumption.</p>
@@ -572,6 +857,9 @@
                             </a>
                         </li>
                         <li>
+                            <a href="https://mindglow.me" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
+                                🦋 MindGlow
+                            </a>
                             <a href="https://schefai.com" target="_blank" class="hover:text-white transition-colors flex items-center gap-2">
                                 <span class="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse inline-block"></span>
                                 שבת שף
