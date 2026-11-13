@@ -360,11 +360,11 @@ var T = {
   he: {
     nav_products:'מוצרים', nav_promise:'ההבטחה שלנו', nav_about:'אודות', nav_contact:'צור קשר',
     hero_eyebrow:'סטודיו למוצרי AI · ישראל',
-    hero_h1:'אפליקציות פשוטות ואמינות <span class="accent">לחיי היומיום.</span>',
+    hero_h1:'אפליקציות יעילות ואמינות <span class="accent">לחיי היומיום.</span>',
     hero_sub:'חינם להתחלה, בלי חשבון, ופרטיות מובנית.',
     hero_cta1:'לאפליקציות שלנו', hero_cta2:'על ELEVATE',
-    prod_h2:'אפליקציות שעושות דבר אחד, היטב', prod_sub:'כל אפליקציה נבנית ב-ELEVATE ומחויבת לאותה הבטחה.',
-    kg_cat:'פריון · by ELEVATE', kg_desc:'לא לשכוח למי לחזור. אומרים בקול, ומקבלים תזכורת עם הודעת וואטסאפ מוכנה.',
+    prod_h2:'אפליקציות שעושות דבר אחד - העצמת היכולת האנושית', prod_sub:'כל אפליקציה נבנית ב-ELEVATE ומחויבת לאותה הבטחה.',
+    kg_cat:'פרודוקטיביות / תזכורות · by ELEVATE', kg_desc:'לא לשכוח למי לחזור. אומרים בקול, ומקבלים תזכורת עם הודעת וואטסאפ מוכנה.',
     pill_nodata:'לא נאסף מידע', pill_nodata2:'בלי חשבון · בלי פרסומות', learn:'למידע נוסף',
     fg_cat:'בריאות וכושר · by ELEVATE', fg_desc:'טיימר צום 16:8 פשוט ורגוע. יודעים מתי נפתח חלון האכילה, עם תזכורות עדינות.', fg_web:'לגרסת הווב',
     cl_cat:'אורח חיים · by ELEVATE', cl_desc:'צ\'אט AI רגוע וקליל, למבוגרים מגיל 18. עוצרים לרגע, שמים לב למה שמרגישים ובוחרים צעד אחד קטן קדימה.', soon:'בקרוב ב-App Store', soon2:'בקרוב ב-App Store', cl_link:'לאתר Clematis',
@@ -403,7 +403,7 @@ function setLang(l){
   document.querySelectorAll('[data-i18n-html]').forEach(function(e){ var k=e.getAttribute('data-i18n-html'); if(dict[k]!==undefined) e.innerHTML = dict[k]; });
   document.getElementById('b-en').setAttribute('aria-pressed', l==='en');
   document.getElementById('b-he').setAttribute('aria-pressed', l==='he');
-  document.title = (l==='he') ? 'ELEVATE | אפליקציות פשוטות ואמינות | ישראל' : 'ELEVATE | Simple, trustworthy apps | Israel';
+  document.title = (l==='he') ? 'ELEVATE | אפליקציות יעילות ואמינות | ישראל' : 'ELEVATE | Simple, trustworthy apps | Israel';
 }
 function openLegal(k){
   var t = LEGAL[lang][k]; lastFocus = document.activeElement;
