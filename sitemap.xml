@@ -1,9 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
    <url>
       <loc>https://elevate-il.net/</loc>
       <lastmod>2026-02-13</lastmod>
       <changefreq>monthly</changefreq>
       <priority>1.0</priority>
+   </url>
+   <url>
+      <loc>https://elevate-il.net/mika-draws/</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://elevate-il.net/mika-draws/"/>
+      <xhtml:link rel="alternate" hreflang="he" href="https://elevate-il.net/mika-draws/he/"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://elevate-il.net/mika-draws/ar/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://elevate-il.net/mika-draws/es/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://elevate-il.net/mika-draws/"/>
+   </url>
+   <url>
+      <loc>https://elevate-il.net/mika-draws/he/</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://elevate-il.net/mika-draws/"/>
+      <xhtml:link rel="alternate" hreflang="he" href="https://elevate-il.net/mika-draws/he/"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://elevate-il.net/mika-draws/ar/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://elevate-il.net/mika-draws/es/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://elevate-il.net/mika-draws/"/>
+   </url>
+   <url>
+      <loc>https://elevate-il.net/mika-draws/ar/</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://elevate-il.net/mika-draws/"/>
+      <xhtml:link rel="alternate" hreflang="he" href="https://elevate-il.net/mika-draws/he/"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://elevate-il.net/mika-draws/ar/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://elevate-il.net/mika-draws/es/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://elevate-il.net/mika-draws/"/>
+   </url>
+   <url>
+      <loc>https://elevate-il.net/mika-draws/es/</loc>
+      <lastmod>2026-11-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+      <xhtml:link rel="alternate" hreflang="en" href="https://elevate-il.net/mika-draws/"/>
+      <xhtml:link rel="alternate" hreflang="he" href="https://elevate-il.net/mika-draws/he/"/>
+      <xhtml:link rel="alternate" hreflang="ar" href="https://elevate-il.net/mika-draws/ar/"/>
+      <xhtml:link rel="alternate" hreflang="es" href="https://elevate-il.net/mika-draws/es/"/>
+      <xhtml:link rel="alternate" hreflang="x-default" href="https://elevate-il.net/mika-draws/"/>
    </url>
 </urlset>
