@@ -412,7 +412,7 @@ function setLang(l){
   document.querySelectorAll('[data-i18n-html]').forEach(function(e){ var k=e.getAttribute('data-i18n-html'); if(dict[k]!==undefined) e.innerHTML = dict[k]; });
   document.getElementById('b-en').setAttribute('aria-pressed', l==='en');
   document.getElementById('b-he').setAttribute('aria-pressed', l==='he');
-  document.title = (l==='he') ? 'ELEVATE | אפליקציות יעילות ואמינות | ישראל' : 'ELEVATE | Simple, trustworthy apps | Israel';
+  document.title = (l==='he') ? 'ELEVATE Apps Israel | אפליקציות יעילות ואמינות' : 'ELEVATE Apps Israel | Simple, trustworthy apps';
 }
 function openLegal(k){
   var t = LEGAL[lang][k]; lastFocus = document.activeElement;
