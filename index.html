@@ -47,7 +47,8 @@ html[lang="he"] .accent{font-family:Rubik,sans-serif;font-style:normal;font-weig
 header{border-bottom:1px solid var(--line);background:#fff;position:sticky;top:0;z-index:20}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px;flex-wrap:wrap}
 .logo{display:flex;align-items:center;gap:12px;color:var(--ink)}
-.logo b{font-weight:800;letter-spacing:.16em;font-size:18px}
+.logo b{font-weight:800;letter-spacing:.16em;font-size:19px}
+.logo .nm{display:flex;flex-direction:column;line-height:1.05;text-align:left}.logo .apps{font-weight:500;font-size:19px;color:var(--blue)}.logo .il{font-size:10.5px;font-weight:600;letter-spacing:.42em;color:var(--muted);margin-top:4px}
 .links{display:flex;align-items:center;gap:26px;font-size:15px;font-weight:500;flex-wrap:wrap}
 .links a{color:var(--text)}.links a:hover{color:var(--ink)}
 .lang{display:flex;border:1px solid #CBD5E1;border-radius:999px;overflow:hidden;font-size:13px;font-weight:600;background:#fff}
@@ -123,6 +124,7 @@ footer .plist .sub{display:block;margin-top:4px;font-size:13px;color:#94A3B8}foo
 footer li a:hover,footer li button:hover{color:#fff;text-decoration:underline}
 .legal{margin-top:56px;padding-top:22px;border-top:1px solid #1E293B;display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:14px;color:#94A3B8}
 .mark{padding-top:8px;font-weight:800;font-size:clamp(56px,13.5vw,150px);line-height:.95;letter-spacing:.14em;color:#131E34;white-space:nowrap;overflow:hidden;user-select:none}
+.mark-sub{display:block;font-size:clamp(14px,2.6vw,28px);font-weight:600;letter-spacing:.5em;line-height:1.4;padding:4px 0 28px 4px;color:#22314F}
 
 /* modal */
 #modal{position:fixed;inset:0;background:rgba(11,18,32,.85);display:flex;align-items:center;justify-content:center;padding:16px;z-index:50}
@@ -153,9 +155,9 @@ footer li a:hover,footer li button:hover{color:#fff;text-decoration:underline}
 
 <header>
   <div class="wrap nav">
-    <a class="logo" href="#top" aria-label="ELEVATE home">
+    <a class="logo" href="#top" aria-label="ELEVATE Apps Israel home">
       <svg width="34" height="34" viewBox="0 0 32 32" aria-hidden="true"><defs><linearGradient id="lg" x1="0" y1="1" x2="0" y2="0"><stop offset="0" stop-color="#0369A1"/><stop offset="1" stop-color="#0EA5E9"/></linearGradient></defs><path d="M5 24.5 16 17l11 7.5" fill="none" stroke="url(#lg)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".45"/><path d="M5 18 16 10.5 27 18" fill="none" stroke="url(#lg)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/><path d="M9.5 10.2 16 5.8l6.5 4.4" fill="none" stroke="url(#lg)" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      <b>ELEVATE</b>
+      <span class="nm" dir="ltr"><span><b>ELEVATE</b> <span class="apps">Apps</span></span><span class="il">ISRAEL</span></span>
     </a>
     <nav class="links" aria-label="Main">
       <a href="#products" data-i18n="nav_products">Products</a>
@@ -178,7 +180,7 @@ footer li a:hover,footer li button:hover{color:#fff;text-decoration:underline}
     <p data-i18n="hero_sub">Free to start, no account needed, and private by design.</p>
     <div class="cta">
       <a class="btn btn-dark" href="#products" data-i18n="hero_cta1">Explore our apps</a>
-      <a class="btn btn-light" href="#about" data-i18n="hero_cta2">About ELEVATE</a>
+      <a class="btn btn-light" href="#about" data-i18n="hero_cta2">About ELEVATE Apps</a>
     </div>
   </div>
 </section>
@@ -319,11 +321,11 @@ footer li a:hover,footer li button:hover{color:#fff;text-decoration:underline}
       </div>
     </div>
     <div class="legal">
-      <span data-i18n="copy">© 2026 ELEVATE, Israel. All rights reserved.</span>
+      <span data-i18n="copy">© 2026 ELEVATE Apps Israel. All rights reserved.</span>
       <span dir="ltr">Apple, the Apple logo and App Store are trademarks of Apple Inc.</span>
     </div>
   </div>
-  <div class="wrap"><div class="mark" aria-hidden="true">ELEVATE</div></div>
+  <div class="wrap"><div class="mark" aria-hidden="true" dir="ltr">ELEVATE<span class="mark-sub">APPS · ISRAEL</span></div></div>
 </footer>
 
 <div id="modal" hidden role="dialog" aria-modal="true" aria-labelledby="m-title">
@@ -345,7 +347,7 @@ var T = {
     hero_eyebrow:'AI product studio · Israel',
     hero_h1:'Simple, trustworthy apps for <span class="accent">everyday life.</span>',
     hero_sub:'Free to start, no account needed, and private by design.',
-    hero_cta1:'Explore our apps', hero_cta2:'About ELEVATE',
+    hero_cta1:'Explore our apps', hero_cta2:'About ELEVATE Apps',
     prod_h2:'Apps that do one thing well', prod_sub:'Every app is made by ELEVATE and follows the same promise.',
     kg_cat:'Productivity · by ELEVATE', kg_desc:'Never forget who to get back to. Say it out loud and get a reminder with the WhatsApp message ready.',
     pill_nodata:'Data Not Collected', pill_nodata2:'No account · No ads', learn:'Learn more',
@@ -362,14 +364,14 @@ var T = {
     f_company:'Company', f_products:'Products',
     l_privacy:'Privacy Policy', l_terms:'Terms of Service', l_security:'Security',
     l_pp:'Privacy', l_tt:'Terms', n_mk:'Mika Draws',
-    copy:'© 2026 ELEVATE, Israel. All rights reserved.', close:'Close'
+    copy:'© 2026 ELEVATE Apps Israel. All rights reserved.', close:'Close'
   },
   he: {
     nav_products:'מוצרים', nav_promise:'ההבטחה שלנו', nav_about:'אודות', nav_contact:'צור קשר',
     hero_eyebrow:'סטודיו למוצרי AI · ישראל',
     hero_h1:'אפליקציות יעילות ואמינות<br><span class="accent">לחיי היומיום.</span>',
     hero_sub:'חינם להתחלה, בלי חשבון, ופרטיות מובנית.',
-    hero_cta1:'לאפליקציות שלנו', hero_cta2:'על ELEVATE',
+    hero_cta1:'לאפליקציות שלנו', hero_cta2:'על ELEVATE Apps',
     prod_h2:'אפליקציות שעושות דבר אחד - העצמת היכולת האנושית', prod_sub:'כל אפליקציה נבנית ב-ELEVATE ומחויבת לאותה הבטחה.',
     kg_cat:'פרודוקטיביות / תזכורות · by ELEVATE', kg_desc:'לא לשכוח למי לחזור. אומרים בקול, ומקבלים תזכורת עם הודעת וואטסאפ מוכנה.',
     pill_nodata:'לא נאסף מידע', pill_nodata2:'בלי חשבון · בלי פרסומות', learn:'למידע נוסף',
@@ -386,7 +388,7 @@ var T = {
     f_company:'החברה', f_products:'מוצרים',
     l_privacy:'מדיניות פרטיות', l_terms:'תנאי שימוש', l_security:'אבטחה',
     l_pp:'פרטיות', l_tt:'תנאים', n_mk:'מיקה מציירת',
-    copy:'© 2026 ELEVATE, ישראל. כל הזכויות שמורות.', close:'סגירה'
+    copy:'© 2026\u200F ELEVATE Apps Israel. כל הזכויות שמורות.', close:'סגירה'
   }
 };
 var LEGAL = {
