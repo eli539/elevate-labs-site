@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en" data-lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<!-- After approval add: <meta name="apple-itunes-app" content="app-id=APP_ID"> -->
+<title>Overburn: Stop AI Overspend — AI API spend alerts for iPhone</title>
+<meta name="description" content="Overburn alerts your iPhone when your Anthropic or OpenAI API spend spikes, and pauses a runaway key in one tap.">
+<meta name="theme-color" content="#0B1220">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;700&amp;family=Heebo:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0B1220;--card:#111A2C;--line:#1E2A42;--ink:#EEF0F4;--mute:#A9B1C2;--body:#C3C9D6;--amber:#F5A524;--red:#E5484D;--green:#CFE3D6}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,Heebo,system-ui,sans-serif}
+html[data-lang=he] body{font-family:Heebo,Inter,system-ui,sans-serif}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:22px 0;flex-wrap:wrap}
+.brand{direction:ltr;unicode-bidi:isolate;display:flex;align-items:center;gap:10px;color:var(--ink);text-decoration:none}
+.brand b{display:block;font:700 21px/1.1 'Space Grotesk',Inter,sans-serif}
+.brand small{display:block;font-size:12px;color:var(--mute)}
+.lang{display:flex;gap:6px}
+.lang button{border:1.5px solid #2B3550;background:none;color:var(--ink);border-radius:18px;padding:8px 14px;font:600 14px inherit;cursor:pointer;min-height:40px}
+html[data-lang=en] .lang [data-set=en],html[data-lang=he] .lang [data-set=he]{background:var(--amber);color:#0B1220;border-color:var(--amber)}
+h1{font:700 clamp(36px,6vw,56px)/1.06 'Space Grotesk',Heebo,sans-serif;margin:0}
+html[data-lang=he] h1,html[data-lang=he] h2{font-family:Heebo,sans-serif}
+h2{font:700 28px/1.2 'Space Grotesk',Heebo,sans-serif;margin:0 0 12px}
+h3{font-size:18px;margin:0 0 6px}
+p,li{color:var(--body)}
+a{color:var(--amber)}a:hover{color:#FFC35C}
+.lead{font-size:19px;max-width:600px;margin:18px 0}
+.kicker{color:var(--amber);font-weight:600;font-size:14px;margin-bottom:14px}
+.hero{display:flex;flex-wrap:wrap;gap:48px;align-items:center;padding:40px 0 64px}
+.hero>div:first-child{flex:999 1 460px;min-width:0}
+.phone{flex:1 1 280px;display:flex;justify-content:center}
+.phone>div{width:290px;border-radius:40px;border:8px solid #1E2638;background:#0E0F12;padding:38px 16px 22px;display:flex;flex-direction:column;gap:12px;direction:ltr}
+.note{background:#26272E;border-radius:18px;padding:12px 14px;font-size:13px;line-height:1.4}
+.note small{display:block;color:#A6A7AF;font-size:11px}
+.today{background:#17181D;border-radius:16px;padding:14px 16px;font-size:12px;color:#A6A7AF}
+.today b{display:block;color:#F2F2F3;font:700 34px 'Space Grotesk',sans-serif}
+.pause{background:var(--red);color:#fff;border-radius:14px;height:48px;display:flex;align-items:center;justify-content:center;font-weight:600}
+.store{display:inline-block}.store img{height:52px;width:auto;display:block}
+.cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.fine{font-size:14px;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+section{padding-bottom:64px}
+.trust{background:#0F1A17;border-color:#24432F}.trust p{color:var(--green)}
+.pro{border-color:var(--amber);background:#1A1710}
+.price{font:700 38px 'Space Grotesk',sans-serif}.price span{font-size:17px;color:var(--body);font-weight:400}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{font-weight:600;font-size:17px;cursor:pointer}
+.steps{counter-reset:s;list-style:none;padding:0;display:grid;gap:12px}
+.steps li{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 18px;display:flex;gap:14px}
+.steps li::before{counter-increment:s;content:counter(s);color:var(--amber);font:700 20px 'Space Grotesk',sans-serif}
+.steps b{color:var(--ink);display:block}
+.doc{max-width:760px}.doc h2{font-size:20px;margin:28px 0 6px}
+.center{text-align:center;display:flex;flex-direction:column;align-items:center;gap:16px}
+footer{border-top:1px solid var(--line);padding:28px 0 44px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px;font-size:14px;color:var(--mute)}
+footer nav a{margin-inline-end:18px}
+html[data-lang=en] [lang=he],html[data-lang=he] [lang=en]{display:none}
+</style>
+</head>
+<body>
+<div class="wrap">
+<div class="top"><a class="brand" href="./"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F5A524" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3c1 3 4 5 4 9a4 4 0 0 1-8 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 0-8z"/></svg><span><b>Overburn</b><small>Works with the Anthropic and OpenAI APIs</small></span></a>
+<div class="lang"><button data-set="en">EN</button><button data-set="he">עברית</button></div></div>
+
+<div lang="en"><div class="hero"><div>
+<div class="kicker">For anyone paying for the Anthropic or OpenAI API</div>
+<h1>Stop AI overspend before the bill does.</h1>
+<p class="lead">Overburn watches your API spend and pings your iPhone the moment a key burns faster than normal. One tap pauses the key.</p>
+<div class="cta"><a class="store" href="https://apps.apple.com/app/idAPP_ID?ct=overburn-page" aria-label="Download Overburn on the App Store"><img src="badges/appstore-en-black.svg" alt="Download on the App Store"></a><span class="fine">Free to start · iPhone</span></div>
+<p class="fine">Tracks pay-as-you-go API spend. Claude Pro/Max and ChatGPT Plus subscriptions are not included.</p>
+</div><div class="phone" aria-hidden="true"><div>
+<div class="note"><small>OVERBURN · now</small><b>Spike on agent-prod</b><br>$38.20 in the last hour (9× normal)</div>
+<div class="today">Spent today<b>$14.82</b></div>
+<div class="pause">Pause this key now</div></div></div></div><section class="grid">
+<div class="card"><h3>One number</h3><p>What you spent today across Anthropic and OpenAI, and how fast you are spending it.</p></div>
+<div class="card"><h3>Alerts on your normal</h3><p>Overburn learns each key's usual pace and warns you when it jumps, not when a fixed number is crossed.</p></div>
+<div class="card"><h3>Pause from the alert</h3><p>A runaway agent at 2 a.m.? Pause its key from the notification. Resume any time. Nothing is deleted.</p></div>
+</section><section><div class="card trust"><h2>Your admin key, explained</h2>
+<p>Usage and cost data is only available with an admin key. We store it encrypted on our server so alerts reach you while the app is closed. We read usage and cost only. We change a key's status only when you tap Pause. Delete your account and the key is erased.</p>
+<a href="privacy.html">Read the privacy policy</a></div></section><section class="grid">
+<div class="card"><p class="fine">Free</p><div class="price">$0</div><p>One provider<br>Daily spend summary</p></div>
+<div class="card pro"><p class="fine" style="color:#F5A524">Pro</p><div class="price">$3.99<span> / month</span></div><p>Anthropic and OpenAI<br>Instant spike alerts<br>Pause a key from the alert<br>or $29.99 / year</p></div>
+</section><!-- YouTube video: uncomment and set VIDEO_ID when the video is ready
+<section><h2>See it in 60 seconds</h2><div style="position:relative;aspect-ratio:16/9;max-width:760px;border-radius:20px;overflow:hidden"><iframe src="https://www.youtube-nocookie.com/embed/VIDEO_ID" title="Overburn in 60 seconds" style="position:absolute;inset:0;width:100%;height:100%;border:0" allowfullscreen loading="lazy"></iframe></div></section>
+--><h2>Questions</h2><section class="faq"><details><summary>How do I get an alert when my Claude API spend spikes?</summary><p>Connect an Anthropic admin key in Overburn. It learns each key's normal pace and pushes an alert to your iPhone when a key spends much faster than usual.</p></details><details><summary>Can I stop a runaway Anthropic or OpenAI API key from my phone?</summary><p>With Anthropic, yes: Overburn sets the key to inactive in one tap and you can resume it any time. For OpenAI, Overburn alerts you and links you to the key in your dashboard.</p></details><details><summary>Does Overburn track Claude Pro, Max or ChatGPT Plus?</summary><p>No. It tracks pay-as-you-go API spend only.</p></details><details><summary>Is it safe to give an app my admin key?</summary><p>Your key is stored encrypted and used to read usage and cost. It changes a key's status only when you tap Pause. Delete your account and the key is erased. You can also revoke it in your provider's console at any time.</p></details><details><summary>Can Overburn see my prompts or answers?</summary><p>No. The usage and cost data providers share contains token counts and amounts, not the content of your requests.</p></details></section><section class="center"><h2>Sleep through the night. Overburn is watching.</h2><a class="store" href="https://apps.apple.com/app/idAPP_ID?ct=overburn-page" aria-label="Download Overburn on the App Store"><img src="badges/appstore-en-black.svg" alt="Download on the App Store"></a></section></div><div lang="he"><div class="hero"><div>
+<div class="kicker">לכל מי שמשלם על ה‑API של Anthropic או OpenAI</div>
+<h1>עוצרים חריגה בהוצאות AI לפני שהחשבון מגיע.</h1>
+<p class="lead">Overburn עוקבת אחרי ההוצאה שלך על ה‑API ומתריעה באייפון ברגע שמפתח שורף מהר מהרגיל. לחיצה אחת עוצרת את המפתח.</p>
+<div class="cta"><a class="store" href="https://apps.apple.com/app/idAPP_ID?ct=overburn-page" aria-label="הורדת Overburn ב-App Store"><img src="badges/appstore-he-black.svg" alt="הורדה ב-App Store"></a><span class="fine">מתחילים בחינם · iPhone</span></div>
+<p class="fine">עוקבת אחרי הוצאה על ה‑API בלבד. מנויים כמו Claude Pro/Max או ChatGPT Plus אינם כלולים.</p>
+</div><div class="phone" aria-hidden="true"><div>
+<div class="note"><small>OVERBURN · now</small><b>Spike on agent-prod</b><br>$38.20 in the last hour (9× normal)</div>
+<div class="today">Spent today<b>$14.82</b></div>
+<div class="pause">Pause this key now</div></div></div></div><section class="grid">
+<div class="card"><h3>מספר אחד</h3><p>כמה הוצאת היום על Anthropic ו‑OpenAI, ובאיזה קצב.</p></div>
+<div class="card"><h3>התראות לפי הרגיל שלך</h3><p>Overburn לומדת את הקצב הרגיל של כל מפתח ומתריעה כשהוא קופץ, לא כשעוברים סכום קבוע.</p></div>
+<div class="card"><h3>עצירה מההתראה</h3><p>סוכן שנתקע בלולאה בשתיים בלילה? עוצרים את המפתח ישר מההתראה. אפשר להפעיל מחדש בכל רגע. שום דבר לא נמחק.</p></div>
+</section><section><div class="card trust"><h2>מה קורה עם מפתח האדמין שלך</h2>
+<p>נתוני שימוש ועלות זמינים רק עם מפתח אדמין. אנחנו שומרים אותו מוצפן בשרת שלנו, כדי שההתראות יגיעו גם כשהאפליקציה סגורה. אנחנו קוראים רק נתוני שימוש ועלות, ומשנים סטטוס של מפתח רק כשאתה לוחץ על עצירה. מחקת את החשבון? המפתח נמחק.</p>
+<a href="privacy.html">למדיניות הפרטיות</a></div></section><section class="grid">
+<div class="card"><p class="fine">חינם</p><div class="price">$0</div><p>ספק אחד<br>סיכום הוצאות יומי</p></div>
+<div class="card pro"><p class="fine" style="color:#F5A524">Pro</p><div class="price">$3.99<span> / לחודש</span></div><p>Anthropic ו‑OpenAI<br>התראות חריגה מיידיות<br>עצירת מפתח מההתראה<br>או $29.99 לשנה</p></div>
+</section><h2>שאלות</h2><section class="faq"><details><summary>איך מקבלים התראה כשההוצאה על ה‑API של Claude קופצת?</summary><p>מחברים מפתח אדמין של Anthropic ב‑Overburn. האפליקציה לומדת את הקצב הרגיל של כל מפתח ושולחת התראה לאייפון כשמפתח מוציא הרבה יותר מהרגיל.</p></details><details><summary>אפשר לעצור מהטלפון מפתח API של Anthropic או OpenAI שיצא משליטה?</summary><p>ב‑Anthropic כן: Overburn מעבירה את המפתח למצב לא פעיל בלחיצה אחת, ואפשר להפעיל אותו מחדש בכל רגע. ב‑OpenAI מקבלים התראה וקישור למפתח בדשבורד.</p></details><details><summary>האם Overburn עוקבת אחרי Claude Pro, Max או ChatGPT Plus?</summary><p>לא. היא עוקבת רק אחרי הוצאה על ה‑API.</p></details><details><summary>זה בטוח לתת לאפליקציה מפתח אדמין?</summary><p>המפתח נשמר מוצפן ומשמש לקריאת נתוני שימוש ועלות. סטטוס של מפתח משתנה רק כשאתה לוחץ על עצירה. מחקת את החשבון? המפתח נמחק. אפשר גם לבטל אותו בכל רגע בקונסולה של הספק.</p></details><details><summary>האם Overburn רואה את הפרומפטים או התשובות שלי?</summary><p>לא. נתוני השימוש והעלות שהספקים משתפים כוללים כמויות טוקנים וסכומים, לא את תוכן הבקשות.</p></details></section><section class="center"><h2>ישנים בשקט. Overburn שומרת.</h2><a class="store" href="https://apps.apple.com/app/idAPP_ID?ct=overburn-page" aria-label="הורדת Overburn ב-App Store"><img src="badges/appstore-he-black.svg" alt="הורדה ב-App Store"></a></section></div>
+<footer>
+<nav><span lang="en"><a href="how-to-use.html">How to use</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></span><span lang="he"><a href="how-to-use.html">איך משתמשים</a><a href="privacy.html">פרטיות</a><a href="terms.html">תנאי שימוש</a><a href="support.html">תמיכה</a></span></nav>
+<div><span lang="en">Overburn by ELEVATE Apps · Independent app, not affiliated with Anthropic or OpenAI. · </span><span lang="he">Overburn מבית ELEVATE Apps · אפליקציה עצמאית שאינה קשורה ל‑Anthropic או ל‑OpenAI. · </span><a href="mailto:info@elevate-il.net">info@elevate-il.net</a></div>
+</footer>
+</div>
+<script>
+(function(){var q=new URLSearchParams(location.search).get('lang');var s=null;try{s=localStorage.getItem('ob-lang')}catch(e){}
+var l=q||s||((navigator.language||'').slice(0,2)==='he'?'he':'en');
+function set(l){document.documentElement.setAttribute('data-lang',l);document.documentElement.dir=l==='he'?'rtl':'ltr';document.documentElement.lang=l;try{localStorage.setItem('ob-lang',l)}catch(e){}}
+set(l);document.addEventListener('click',function(e){var b=e.target.closest('[data-set]');if(b)set(b.getAttribute('data-set'))})})();
+</script>
+</body>
+</html>
